@@ -171,5 +171,6 @@
     </profiles>
     <modules>
         <module>configurable-exception-handler</module>
+        <module>beanvalidation-exception-handler</module>
     </modules>
 </project>

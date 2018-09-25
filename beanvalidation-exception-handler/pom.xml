@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.microprofile-ext</groupId>
+        <artifactId>jaxrs-ext</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    
+    <groupId>org.microprofile-ext.jaxrs-ext</groupId>
+    <artifactId>beanvalidation-exception-handler</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    
+    <name>Microprofile JAX-RS Extensions :: Bean validation Exception Handler</name>
+    <description>Mapping Bean validation Exceptions to JAX-RS Response</description>
+    
+    <dependencies>
+        <dependency>    
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>2.0.0.Final</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+    
+</project>

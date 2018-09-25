@@ -8,3 +8,4 @@
 Here you will find some extensions for JAX-RS:
 
 * [Configurable Exception Handler](https://github.com/microprofile-extensions/jaxrs-ext/tree/master/configurable-exception-handler)
+* [Bean validation Exception Handler](https://github.com/microprofile-extensions/jaxrs-ext/tree/master/beanvalidation-exception-handler)

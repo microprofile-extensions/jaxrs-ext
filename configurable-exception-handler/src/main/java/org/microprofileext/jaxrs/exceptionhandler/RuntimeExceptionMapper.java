@@ -32,6 +32,7 @@ import org.eclipse.microprofile.config.inject.ConfigProperty;
  */
 @Log
 @Provider
+@Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML,MediaType.TEXT_PLAIN})
 public class RuntimeExceptionMapper implements ExceptionMapper<RuntimeException> {
     
     @Inject
@@ -50,7 +51,6 @@ public class RuntimeExceptionMapper implements ExceptionMapper<RuntimeException>
     private String stacktraceLogLevel;
     
     @Override
-    @Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
     public Response toResponse(RuntimeException exception) {
         return handleThrowable(exception);
     }
@@ -71,6 +71,7 @@ public class RuntimeExceptionMapper implements ExceptionMapper<RuntimeException>
                 
                 Response.ResponseBuilder responseBuilder = Response.status(status).header(REASON, reason);
                 if(includeStacktrace){
+                    // TODO: Check media types ?
                     responseBuilder = responseBuilder.entity(getStacktrace(exception));
                 }
                 
@@ -100,8 +101,8 @@ public class RuntimeExceptionMapper implements ExceptionMapper<RuntimeException>
     }
     
     private String constructReason(Throwable exception, String message){
-        String premessage = "";
-        if(includeClassName)premessage = "[" + exception.getClass().getName() + "] ";
+        String premessage = EMPTY;
+        if(includeClassName)premessage = OPEN_BRACKET + exception.getClass().getName() + CLOSE_BRACKET;
         return premessage + message;
     }
     
@@ -154,5 +155,9 @@ public class RuntimeExceptionMapper implements ExceptionMapper<RuntimeException>
     }
     
     private static final String REASON = "reason";
+    private static final String EMPTY = "";
+    private static final String OPEN_BRACKET = "[";
+    private static final String CLOSE_BRACKET = "]";
+    
     private static final String STATUS_CODE_KEY = "/mp-jaxrs-ext/statuscode";
 }
