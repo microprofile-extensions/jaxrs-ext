@@ -5,15 +5,17 @@ It will add the exception message in the reason header, and the validation error
 
 ## Adding Configurable Exception Handler
 
-In ```pom.xml```
+In ```pom.xml```:
     
-    ```xml
+```xml
+
     <dependency>
         <groupId>org.microprofile-ext.jaxrs-ext</groupId>
         <artifactId>beanvalidation-exception-handler</artifactId>
         <version>XXXXX</version>
     </dependency>
-    ```
+
+```
 
 ## Configuration options
 

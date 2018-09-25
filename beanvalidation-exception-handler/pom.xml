@@ -4,12 +4,12 @@
     <parent>
         <groupId>org.microprofile-ext</groupId>
         <artifactId>jaxrs-ext</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.1-SNAPSHOT</version>
     </parent>
     
     <groupId>org.microprofile-ext.jaxrs-ext</groupId>
     <artifactId>beanvalidation-exception-handler</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     
     <name>Microprofile JAX-RS Extensions :: Bean validation Exception Handler</name>
