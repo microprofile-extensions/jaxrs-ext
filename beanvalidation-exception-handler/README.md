@@ -1,5 +1,8 @@
 # JAX-RS Extensions | Bean validation Exception Handler
 
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.microprofile-ext.jaxrs-ext/beanvalidation-exception-handler/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.microprofile-ext.jaxrs-ext/beanvalidation-exception-handler)
+[![Javadocs](https://www.javadoc.io/badge/org.microprofile-ext.jaxrs-ext/beanvalidation-exception-handler.svg)](https://www.javadoc.io/doc/org.microprofile-ext.jaxrs-ext/beanvalidation-exception-handler)
+
 This Handler handles all Bean validation Exceptions in JAX-RS. It maps Exceptions to HTTP 412 Response code. 
 It will add the exception message in the reason header, and the validation errors in the body (XML / JSON)
 
@@ -13,6 +16,7 @@ In ```pom.xml```:
         <groupId>org.microprofile-ext.jaxrs-ext</groupId>
         <artifactId>beanvalidation-exception-handler</artifactId>
         <version>XXXXX</version>
+        <scope>runtime</scope>
     </dependency>
 
 ```

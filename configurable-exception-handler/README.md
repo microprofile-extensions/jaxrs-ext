@@ -1,5 +1,8 @@
 # JAX-RS Extensions | Configurable Exception Handler
 
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.microprofile-ext.jaxrs-ext/configurable-exception-handler/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.microprofile-ext.jaxrs-ext/configurable-exception-handler)
+[![Javadocs](https://www.javadoc.io/badge/org.microprofile-ext.jaxrs-ext/configurable-exception-handler.svg)](https://www.javadoc.io/doc/org.microprofile-ext.jaxrs-ext/configurable-exception-handler)
+
 This Handler handles all Runtime Exceptions in JAX-RS. It maps Exceptions to HTTP Response codes. It will add the exception message in the reason header.
 
 ## Adding Configurable Exception Handler
@@ -12,6 +15,7 @@ In ```pom.xml```:
         <groupId>org.microprofile-ext.jaxrs-ext</groupId>
         <artifactId>configurable-exception-handler</artifactId>
         <version>XXXXX</version>
+        <scope>runtime</scope>
     </dependency>
 
 ```
