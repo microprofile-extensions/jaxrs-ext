@@ -48,6 +48,3 @@ Here some default mappings. You can add more mappings in your own config, or ove
 In your config (MicroProfile Config API) add your own mapping (examples above)
 
 *exceptionClassName/mp-jaxrs-ext/statuscode = XXX*
-
-## Example
-@TODO

@@ -25,7 +25,3 @@ In ```pom.xml```:
 
 * **jaxrs-ext.includeClassName = false (default)** - if set to true this will include the classname in the reason header message. Default to false, so only the exception message will be in the reason header
 * **jaxrs-ext.stacktraceLogLevel = FINEST (default)** - the log level in the system log. Default to FINEST.
-
-## Example
-
-@TODO
