@@ -1,4 +1,6 @@
-# JAX-RS Extensions | Configurable Exception Handler
+[Back to jaxrs-ext](https://github.com/microprofile-extensions/jaxrs-ext/blob/master/README.md)
+
+# Configurable Exception Handler
 
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.microprofile-ext.jaxrs-ext/configurable-exception-handler/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.microprofile-ext.jaxrs-ext/configurable-exception-handler)
 [![Javadocs](https://www.javadoc.io/badge/org.microprofile-ext.jaxrs-ext/configurable-exception-handler.svg)](https://www.javadoc.io/doc/org.microprofile-ext.jaxrs-ext/configurable-exception-handler)
