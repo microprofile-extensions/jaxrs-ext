@@ -1,4 +1,6 @@
-# JAX-RS Extensions | Bean validation Exception Handler
+[Back to jaxrs-ext](https://github.com/microprofile-extensions/jaxrs-ext/blob/master/README.md)
+
+# Bean validation Exception Handler
 
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.microprofile-ext.jaxrs-ext/beanvalidation-exception-handler/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.microprofile-ext.jaxrs-ext/beanvalidation-exception-handler)
 [![Javadocs](https://www.javadoc.io/badge/org.microprofile-ext.jaxrs-ext/beanvalidation-exception-handler.svg)](https://www.javadoc.io/doc/org.microprofile-ext.jaxrs-ext/beanvalidation-exception-handler)
