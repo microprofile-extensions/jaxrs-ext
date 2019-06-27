@@ -18,7 +18,15 @@ import org.eclipse.microprofile.config.inject.ConfigProperty;
  * Translate Java validation exceptions to HTTP response
  * @author Phillip Kruger (phillip.kruger@phillip-kruger.com)
  * 
- * 412 Precondition Failed (RFC 7232): The server does not meet one of the preconditions that the requester put on the request
+ * From version 1.0.1 the default responseCode will be 422: Unprocessable Entity - 
+ * The request was well-formed but was unable to be followed due to semantic errors
+ * 
+ * The initial (version 1.0.0) default version was: 412: Precondition Failed (RFC 7232) - 
+ * The server does not meet one of the preconditions that the requester put on the request.
+ *
+ * See: https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#4xx_Client_errors
+ * 
+ * You can also now configure the responseCode (overriding the default) by setting the jaxrs-ext.responseCode config value.
  */
 @Log
 @Provider
@@ -30,6 +38,9 @@ public class ValidationExceptionMapper implements ExceptionMapper<ConstraintViol
     
     @Inject @ConfigProperty(name = "jaxrs-ext.stacktraceLogLevel", defaultValue = "FINEST")
     private String stacktraceLogLevel;
+    
+    @Inject @ConfigProperty(name = "jaxrs-ext.responseCode", defaultValue = "422")
+    private int responseCode;
     
     @Override
     public Response toResponse(ConstraintViolationException constraintViolationException) {
@@ -60,7 +71,7 @@ public class ValidationExceptionMapper implements ExceptionMapper<ConstraintViol
         
         log.log(getLevel(), reason, constraintViolationException);
         
-        return Response.status(Response.Status.PRECONDITION_FAILED)
+        return Response.status(responseCode)
                 .header(REASON, reason).entity(errors).build();
     }
     
